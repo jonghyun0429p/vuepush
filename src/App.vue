@@ -1,20 +1,23 @@
 <template>
+  <head>
+    <title>회원가입 페이지</title>
+  </head>
   <div class="container; background" style="font-family: serif">
     <form @submit.prevent="submitForm">
-      <div>회원가입 페이지</div>
-      <div>
+      <h1 class="a">회원가입 페이지입니다.</h1>
+      <div class="margin">
         <label for="email">email</label>
         <input type="text" id="email" v-model="email"/>
       </div>
-      <div>
+      <div class="margin">
         <label for="name">이름</label>
         <input type="text" id="name" v-model="name"/>
       </div>
-      <div>
+      <div class="margin">
         <label for="password">비밀번호</label>
         <input type="password" id="password" v-model="password"/>
       </div>
-      <div>
+      <div class="margin">
         <label for="passwordConfirm">비밀번호확인</label>
         <input type="password" id="passwordConfirm" v-model="passwordConfirm"/>
       </div>
@@ -65,14 +68,30 @@ export default {
   background-position: center;
 }
 
-.css {
-  width: 1600px;
-  height: 50px;
-  background: rgb(219, 219, 245);
-  text-align: center;
-  line-height: 30px;
-  box-sizing: border-box;
+.margin {
+  width:500px;
+  height:40px;
+  border-style:solid;
+  border-width:5px;
+  border-color:grey;
+  border-radius:2em;
+  
+  margin: 40px;
 }
 
+div {
+  text-align:center;
+  vertical-align:middle;
+}
+
+.a {
+  font-family : sans-serif;
+  font-size : 45px;
+}
+
+.relative {
+  position:relative;
+  top:45px;
+}
 
 </style>
